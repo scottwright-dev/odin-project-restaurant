@@ -4,8 +4,7 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb",
+        "eslint-config-airbnb-base",
         "prettier"
     ],
     "overrides": [],
@@ -13,5 +12,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "rules": {}
+    "rules": {
+        "import/prefer-default-export": "off"
+    }
 }
