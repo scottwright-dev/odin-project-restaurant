@@ -15,5 +15,10 @@ export function createHomePage () {
     const copy = document.createElement('p');
     copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';
     content.appendChild(copy);
+
+    const menuTab = document.createElement('a');
+    menuTab.textContent = 'Menu';
+    menuTab.href = '#';
+    menuTab.addEventListener('click', () => switchTab('menu'));
+    content.appendChild(menuTab);
 }
-  
