@@ -8,7 +8,7 @@ function switchTab(tab) {
 
   switch (tab) {
     case 'home':
-      createHomePage(contentDiv);
+      createHomePage(contentDiv, switchTab);
       break;
     case 'menu':
       createMenuPage(contentDiv);
@@ -21,8 +21,10 @@ function switchTab(tab) {
 // Initial loading
 function initialLoad() {
   const contentDiv = document.querySelector('#content');
-  createHomePage(contentDiv);
+  createHomePage(contentDiv, switchTab);
   switchTab('home'); // Display home page initially
 }
 
 initialLoad();
+
+

@@ -1,5 +1,4 @@
-
-export function createHomePage () {
+export function createHomePage (contentElement, switchTab) {
     const content = document.querySelector('#content');
    
     // create elements
