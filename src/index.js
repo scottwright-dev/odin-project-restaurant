@@ -11,7 +11,7 @@ function switchTab(tab) {
       createHomePage(contentDiv, switchTab);
       break;
     case 'menu':
-      createMenuPage(contentDiv);
+      createMenuPage(contentDiv, switchTab);
       break;
     default:
       break;
