@@ -1,9 +1,6 @@
 import { createHomePage } from './homePage';
 import { createMenuPage } from './menuPage';
 
-const homeTab = document.querySelector('#home-tab');
-const menuTab = document.querySelector('#menu-tab');
-
 // Tab switching
 function switchTab(tab) {
   const contentDiv = document.querySelector('#content');
@@ -23,9 +20,9 @@ function switchTab(tab) {
 
 // Initial loading
 function initialLoad() {
-  createHomePage();
+  const contentDiv = document.querySelector('#content');
+  createHomePage(contentDiv);
   switchTab('home'); // Display home page initially
 }
 
 initialLoad();
-
