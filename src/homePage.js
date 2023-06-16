@@ -9,13 +9,16 @@ export function createHomePage (switchTab) {
     const image = document.createElement('img');
     image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash.jpg';
     image.alt = 'Ichiraku Ramen Bar';
+    image.classList.add('homepage-image');
     content.appendChild(image);
 
     const title = document.createElement('h1');
     title.textContent = 'Ichiraku Ramen Bar';
+    title.classList.add('homepage-title');
     content.appendChild(title);
 
     const copy = document.createElement('p');
     copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';
+    copy.classList.add('homepage-copy');
     content.appendChild(copy);
 }
