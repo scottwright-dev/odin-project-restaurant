@@ -1,4 +1,4 @@
-import { createTabs } from './tabManager';
+import createTabs from './tabManager';
 
 export function createHomePage (switchTab) {
     const content = document.querySelector('#content');

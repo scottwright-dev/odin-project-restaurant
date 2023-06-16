@@ -1,4 +1,4 @@
-import { createTabs } from './tabManager';
+import createTabs from './tabManager';
 
 export function createMenuPage(parentElement, switchTab) {
   createTabs(switchTab);
