@@ -1,4 +1,4 @@
-import { createTabs } from './tabManager';
+import createTabs from './tabManager';
 
 export function createContactPage(parentElement, switchTab) {
   createTabs(switchTab);

@@ -1,6 +1,6 @@
-import { createHomePage } from './homePage';
-import { createMenuPage } from './menuPage';
-import { createContactPage } from './contactPage';
+import { createHomePage } from './modules/homePage';
+import { createMenuPage } from './modules/menuPage';
+import { createContactPage } from './modules/contactPage';
 
 // Tab switching
 function switchTab(tab) {

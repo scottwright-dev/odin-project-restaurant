@@ -12,53 +12,53 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/contactPage.js":
-/*!****************************!*\
-  !*** ./src/contactPage.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createContactPage: () => (/* binding */ createContactPage)\n/* harmony export */ });\n  function createContactPage(parentElement, switchTab) {\n    const content = document.querySelector('#content');\n  \n    // home tab\n    const home = document.createElement('a');\n    home.textContent = 'Home';\n    home.href = '#';\n    home.addEventListener('click', () => switchTab('home'));\n    content.appendChild(home);\n\n    // contact content\n    const contactContainer = document.createElement('div');\n    contactContainer.textContent = 'contact info to be added here';\n    \n    parentElement.appendChild(contactContainer);\n  }\n  \n\n//# sourceURL=webpack://odin-project-restaurant/./src/contactPage.js?");
-
-/***/ }),
-
-/***/ "./src/homePage.js":
-/*!*************************!*\
-  !*** ./src/homePage.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHomePage: () => (/* binding */ createHomePage)\n/* harmony export */ });\n/* harmony import */ var _tabManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabManager */ \"./src/tabManager.js\");\n\n\nfunction createHomePage (switchTab) {\n    const content = document.querySelector('#content');\n   \n    // create elements\n    const image = document.createElement('img');\n    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash.jpg';\n    image.alt = 'Ichiraku Ramen Bar';\n    content.appendChild(image);\n\n    const title = document.createElement('h1');\n    title.textContent = 'Ichiraku Ramen Bar';\n    content.appendChild(title);\n\n    const copy = document.createElement('p');\n    copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';\n    content.appendChild(copy);\n\n    (0,_tabManager__WEBPACK_IMPORTED_MODULE_0__.createTabs)(switchTab);\n\n}\n\n//# sourceURL=webpack://odin-project-restaurant/./src/homePage.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homePage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homePage */ \"./src/homePage.js\");\n/* harmony import */ var _menuPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menuPage */ \"./src/menuPage.js\");\n/* harmony import */ var _contactPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contactPage */ \"./src/contactPage.js\");\n\n\n\n\n// Tab switching\nfunction switchTab(tab) {\n  const contentDiv = document.querySelector('#content');\n  contentDiv.textContent = '';\n\n  switch (tab) {\n    case 'home':\n      (0,_homePage__WEBPACK_IMPORTED_MODULE_0__.createHomePage)(switchTab);\n      break;\n    case 'menu':\n      (0,_menuPage__WEBPACK_IMPORTED_MODULE_1__.createMenuPage)(contentDiv, switchTab);\n      break;\n    case 'contact':\n      (0,_contactPage__WEBPACK_IMPORTED_MODULE_2__.createContactPage)(contentDiv, switchTab);\n      break;\n    default:\n  }\n}\n\n// Initial loading\nfunction initialLoad() {\n  const contentDiv = document.querySelector('#content');\n  (0,_homePage__WEBPACK_IMPORTED_MODULE_0__.createHomePage)(contentDiv, switchTab);\n  switchTab('home'); // Display home page initially\n}\n\ninitialLoad();\n\n//# sourceURL=webpack://odin-project-restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_homePage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/homePage */ \"./src/modules/homePage.js\");\n/* harmony import */ var _modules_menuPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menuPage */ \"./src/modules/menuPage.js\");\n/* harmony import */ var _modules_contactPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/contactPage */ \"./src/modules/contactPage.js\");\n\n\n\n\n// Tab switching\nfunction switchTab(tab) {\n  const contentDiv = document.querySelector('#content');\n  contentDiv.textContent = '';\n\n  switch (tab) {\n    case 'home':\n      (0,_modules_homePage__WEBPACK_IMPORTED_MODULE_0__.createHomePage)(switchTab);\n      break;\n    case 'menu':\n      (0,_modules_menuPage__WEBPACK_IMPORTED_MODULE_1__.createMenuPage)(contentDiv, switchTab);\n      break;\n    case 'contact':\n      (0,_modules_contactPage__WEBPACK_IMPORTED_MODULE_2__.createContactPage)(contentDiv, switchTab);\n      break;\n    default:\n  }\n}\n\n// Initial loading\nfunction initialLoad() {\n  const contentDiv = document.querySelector('#content');\n  (0,_modules_homePage__WEBPACK_IMPORTED_MODULE_0__.createHomePage)(contentDiv, switchTab);\n  switchTab('home'); // Display home page initially\n}\n\ninitialLoad();\n\n//# sourceURL=webpack://odin-project-restaurant/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/menuPage.js":
-/*!*************************!*\
-  !*** ./src/menuPage.js ***!
-  \*************************/
+/***/ "./src/modules/contactPage.js":
+/*!************************************!*\
+  !*** ./src/modules/contactPage.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createMenuPage: () => (/* binding */ createMenuPage)\n/* harmony export */ });\nfunction createMenuPage(parentElement, switchTab) {\n    const content = document.querySelector('#content');\n  \n    // home tab\n    const home = document.createElement('a');\n    home.textContent = 'Home';\n    home.href = '#';\n    home.addEventListener('click', () => switchTab('home'));\n    content.appendChild(home);\n\n    // menu content\n    const menuContainer = document.createElement('div');\n    menuContainer.textContent = 'Menu items to be added here';\n    \n    parentElement.appendChild(menuContainer);\n  }\n  \n\n//# sourceURL=webpack://odin-project-restaurant/./src/menuPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createContactPage: () => (/* binding */ createContactPage)\n/* harmony export */ });\n/* harmony import */ var _tabManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabManager */ \"./src/modules/tabManager.js\");\n\n\nfunction createContactPage(parentElement, switchTab) {\n  (0,_tabManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(switchTab);\n\n  // contact content\n  const contactContainer = document.createElement('div');\n  contactContainer.textContent = 'contact info to be added here';\n\n  parentElement.appendChild(contactContainer);\n}\n\n\n//# sourceURL=webpack://odin-project-restaurant/./src/modules/contactPage.js?");
 
 /***/ }),
 
-/***/ "./src/tabManager.js":
-/*!***************************!*\
-  !*** ./src/tabManager.js ***!
-  \***************************/
+/***/ "./src/modules/homePage.js":
+/*!*********************************!*\
+  !*** ./src/modules/homePage.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTabs: () => (/* binding */ createTabs)\n/* harmony export */ });\nfunction createTabs(switchTab) {\n    const content = document.querySelector('#content');\n  \n    function createIndividualTab(label, tabName) {\n      const tab = document.createElement('a');\n      tab.textContent = label;\n      tab.href = '#';\n      tab.addEventListener('click', () => switchTab(tabName));\n      return tab;\n    }\n  \n    const homeTab = createIndividualTab('Home', 'home');\n    const menuTab = createIndividualTab('Menu', 'menu');\n    const contactTab = createIndividualTab('Contact', 'contact');\n  \n    content.appendChild(homeTab);\n    content.appendChild(menuTab);\n    content.appendChild(contactTab);\n  }\n  \n\n//# sourceURL=webpack://odin-project-restaurant/./src/tabManager.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHomePage: () => (/* binding */ createHomePage)\n/* harmony export */ });\n/* harmony import */ var _tabManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabManager */ \"./src/modules/tabManager.js\");\n\n\nfunction createHomePage (switchTab) {\n    const content = document.querySelector('#content');\n\n    (0,_tabManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(switchTab);\n   \n    // create elements\n    const image = document.createElement('img');\n    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash.jpg';\n    image.alt = 'Ichiraku Ramen Bar';\n    content.appendChild(image);\n\n    const title = document.createElement('h1');\n    title.textContent = 'Ichiraku Ramen Bar';\n    content.appendChild(title);\n\n    const copy = document.createElement('p');\n    copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';\n    content.appendChild(copy);\n}\n\n//# sourceURL=webpack://odin-project-restaurant/./src/modules/homePage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/menuPage.js":
+/*!*********************************!*\
+  !*** ./src/modules/menuPage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createMenuPage: () => (/* binding */ createMenuPage)\n/* harmony export */ });\n/* harmony import */ var _tabManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabManager */ \"./src/modules/tabManager.js\");\n\n\nfunction createMenuPage(parentElement, switchTab) {\n  (0,_tabManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(switchTab);\n\n  // menu content\n  const menuContainer = document.createElement('div');\n  menuContainer.textContent = 'Menu items to be added here';\n\n  parentElement.appendChild(menuContainer);\n}\n\n\n//# sourceURL=webpack://odin-project-restaurant/./src/modules/menuPage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/tabManager.js":
+/*!***********************************!*\
+  !*** ./src/modules/tabManager.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createTabs(switchTab) {\n  const content = document.querySelector('#content');\n\n  function createIndividualTab(label, tabName) {\n    const tab = document.createElement('a');\n    tab.textContent = label;\n    tab.href = '#';\n    tab.addEventListener('click', () => switchTab(tabName));\n    return tab;\n  }\n\n  const homeTab = createIndividualTab('Home', 'home');\n  const menuTab = createIndividualTab('Menu', 'menu');\n  const contactTab = createIndividualTab('Contact', 'contact');\n\n  content.appendChild(homeTab);\n  content.appendChild(menuTab);\n  content.appendChild(contactTab);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createTabs);\n\n\n//# sourceURL=webpack://odin-project-restaurant/./src/modules/tabManager.js?");
 
 /***/ })
 
