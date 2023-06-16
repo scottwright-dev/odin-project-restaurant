@@ -1,5 +1,6 @@
 import { createHomePage } from './homePage';
 import { createMenuPage } from './menuPage';
+import { createContactPage } from './contactPage';
 
 // Tab switching
 function switchTab(tab) {
@@ -8,13 +9,15 @@ function switchTab(tab) {
 
   switch (tab) {
     case 'home':
-      createHomePage(contentDiv, switchTab);
+      createHomePage(switchTab);
       break;
     case 'menu':
       createMenuPage(contentDiv, switchTab);
       break;
-    default:
+    case 'contact':
+      createContactPage(contentDiv, switchTab);
       break;
+    default:
   }
 }
 
@@ -26,5 +29,3 @@ function initialLoad() {
 }
 
 initialLoad();
-
-
