@@ -1,4 +1,6 @@
-export function createHomePage (contentElement, switchTab) {
+import { createTabs } from './tabManager';
+
+export function createHomePage (switchTab) {
     const content = document.querySelector('#content');
    
     // create elements
@@ -15,9 +17,6 @@ export function createHomePage (contentElement, switchTab) {
     copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';
     content.appendChild(copy);
 
-    const menuTab = document.createElement('a');
-    menuTab.textContent = 'Menu';
-    menuTab.href = '#';
-    menuTab.addEventListener('click', () => switchTab('menu'));
-    content.appendChild(menuTab);
+    createTabs(switchTab);
+
 }
