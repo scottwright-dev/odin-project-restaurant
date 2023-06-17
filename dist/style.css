@@ -42,3 +42,11 @@
         --line-height: 1.5;
         --text-color: #ffffff;
       }
+
+/* CLASS STYLES */
+
+.homepage-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
