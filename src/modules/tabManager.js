@@ -10,12 +10,17 @@ function createTabs(switchTab) {
   }
 
   const homeTab = createIndividualTab('Home', 'home');
-  const menuTab = createIndividualTab('Menu', 'menu');
-  const contactTab = createIndividualTab('Contact', 'contact');
-
+  homeTab.classList.add('nav-tabs');
   content.appendChild(homeTab);
+
+  const menuTab = createIndividualTab('Menu', 'menu');
+  menuTab.classList.add('nav-tabs');
   content.appendChild(menuTab);
+
+  const contactTab = createIndividualTab('Contact', 'contact');
+  contactTab.classList.add('nav-tabs');
   content.appendChild(contactTab);
+
 }
 
 export default createTabs;
