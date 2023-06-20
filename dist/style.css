@@ -131,3 +131,19 @@ a, p, h1 {
   font-weight: 400;
   color: var(--text-highlight);
 }
+
+/* CONTACT PAGE STYLES */ 
+
+.contactpage-bg {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  max-width: 750px;
+  margin: 0 auto;
+  height: auto;
+  object-fit: cover;
+}
+
