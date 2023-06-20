@@ -40,15 +40,15 @@ p, h1, h2, h3, h4, h5, h6 {
 /* ROOT */
 
 :root {
-  --background-color: #041315;
+  --background-color: #051112;
   --font: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-size: 16px;
-  --font-size-range: 3rem, 16vw, 6rem;
+  --font-size-range: 3rem, 16vw, 5rem;
   --font-weight: 400;
   --line-height: 1.5;
-  --text-color: #ffffff;
+  --text-color: #d2d7df;
 }
 
 /* ELEMENT STYLES */
@@ -56,7 +56,13 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   background-color: var(--background-color);
 }
-/* CLASS STYLES */
+
+a, p, h1 {
+  color: var(--text-color);
+  font: var(--font);
+}
+
+/* HOMEPAGE STYLES */
 
 .homepage-image {
   display: flex;
@@ -71,14 +77,23 @@ body {
 
 .homepage-title {
   animation: fadeInUp 1s;
-  color: var(--text-color);
-  font: var(--font);
   font-size: clamp(var(--font-size-range));
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.homepage-copy {
+  animation: fadeIn 4s;
+  font-size: 1.25rem;
   position: absolute;
   top: 75%;
   left: 50%;
   text-align: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 120%);
   width: 100%;
 }
 
@@ -95,4 +110,15 @@ body {
   }
 }
 
+/* COPY TEXT ANIMATION */
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 120%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 120%);
+  }
+}
