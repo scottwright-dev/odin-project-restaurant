@@ -12,13 +12,18 @@ export function createHomePage (switchTab) {
     image.classList.add('homepage-image');
     content.appendChild(image);
 
+    const textContainer = document.createElement('div');
+    textContainer.classList.add('text-container');
+    content.appendChild(textContainer);
+
     const title = document.createElement('h1');
     title.textContent = 'Ichiraku Ramen Bar';
     title.classList.add('homepage-title');
-    content.appendChild(title);
+    textContainer.appendChild(title);
 
     const copy = document.createElement('p');
     copy.textContent = 'Japanese tradition intertwined with modernity. Crafting an extraordinary ramen experience in the heart of London.';
     copy.classList.add('homepage-copy');
-    content.appendChild(copy);
+    textContainer.appendChild(copy);
+
 }
