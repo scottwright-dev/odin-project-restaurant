@@ -122,3 +122,24 @@ a, p, h1 {
     transform: translate(-50%, 120%);
   }
 }
+
+/* TAB MODULE STYLES */
+
+.nav-tabs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.nav-tabs {
+  color: var(--text-color);
+  margin-right: 2rem;
+  font: var(--font);
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.nav-tabs:hover {
+  text-decoration: underline;
+}
