@@ -40,13 +40,14 @@ p, h1, h2, h3, h4, h5, h6 {
 /* ROOT */
 
 :root {
-  --background-color: #051112;
+  --background-color: #061112;
   --font-family: 'Quicksand', sans-serif;
   --font-size: 16px;
   --font-size-range: 3rem, 16vw, 5rem;
   --font-weight: 400;
   --line-height: 1.5;
   --text-color: #d2d7df;
+  --text-highlight: #eca858;
 }
 
 /* ELEMENT STYLES */
@@ -58,6 +59,7 @@ body {
 a, p, h1 {
   color: var(--text-color);
   font-family: var(--font-family);
+  font-weight: var(--font-weight);
 }
 
 /* HOMEPAGE STYLES */
@@ -88,6 +90,8 @@ a, p, h1 {
 
 .homepage-title {
   font-size: 4rem;
+  font-weight: 500;
+  color: var(--text-highlight);
 }
 
 .homepage-copy {
@@ -120,8 +124,10 @@ a, p, h1 {
   margin-right: 2rem;
   font-size: 2.5rem;
   text-decoration: none;
+  transition: transform 0.2s ease; 
 }
 
 .nav-tabs:hover {
-  text-decoration: underline;
+  font-weight: 400;
+  color: var(--text-highlight);
 }
