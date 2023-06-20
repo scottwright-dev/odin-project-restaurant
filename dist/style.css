@@ -69,32 +69,31 @@ a, p, h1 {
   justify-content: center;
   align-items: center;
   width: 60%;
+  max-width: 750px;
   margin: 0 auto;
   height: auto;
   object-fit: cover;
   position: relative;
 }
 
-.homepage-title {
-  animation: fadeInUp 1s;
-  font-size: clamp(var(--font-size-range));
-  position: absolute;
-  top: 73%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-.homepage-copy {
-  animation: fadeIn 4s;
-  font-size: 1.25rem;
+.text-container {
+  animation: fadeInUp 1.5s;
   position: absolute;
   top: 75%;
   left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.homepage-title, .homepage-copy {
   text-align: center;
-  transform: translate(-50%, 120%);
-  width: 100%;
+}
+
+.homepage-title {
+  font-size: 4rem;
+}
+
+.homepage-copy {
+  font-size: 1.5rem;
 }
 
 /* TEXT ANIMATION */
@@ -106,20 +105,7 @@ a, p, h1 {
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* COPY TEXT ANIMATION */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 120%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 120%);
+    transform: translate(-50%, -25%);
   }
 }
 
@@ -129,14 +115,12 @@ a, p, h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 }
 
 .nav-tabs {
   color: var(--text-color);
   margin-right: 2rem;
-  font: var(--font);
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-decoration: none;
 }
 
