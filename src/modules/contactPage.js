@@ -10,5 +10,11 @@ export function createContactPage(parentElement, switchTab) {
   bgImage.classList.add('contactpage-bg');
   contactContainer.appendChild(bgImage);
 
+  const map = document.createElement('img');
+  map.src = '../src/img/ichiraku-map.png';
+  map.alt = 'location map of restaurant. 23 Frith Street London W1'
+  map.classList.add('map');
+  contactContainer.appendChild(map);
+
   parentElement.appendChild(contactContainer);
 }
