@@ -63,6 +63,10 @@ a, p, h1, h2, li {
   font-weight: var(--font-weight);
 }
 
+ul {
+  list-style: none;
+}
+
 /* HOMEPAGE STYLES */
 
 .homepage-image {
@@ -127,12 +131,11 @@ a, p, h1, h2, li {
   animation: scrollIn ease-in 700ms;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .nav-tabs {
   color: var(--text-color);
-  margin-right: 2rem;
+  padding: 0.5rem 1.5rem;
   font-size: 2.5rem;
   text-decoration: none;
   transition: transform 0.2s ease; 
@@ -168,7 +171,7 @@ a, p, h1, h2, li {
 
 .map {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 6px solid var(--text-color);
@@ -191,6 +194,11 @@ a, p, h1, h2, li {
 
 .contact-text-container {
   text-align: center;
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInLeft 0.5s ease-in;
 }
 
 .contact-text-container h2 {
@@ -202,4 +210,9 @@ a, p, h1, h2, li {
   color: var(--text-highlight);
   font-weight: bold;
 }
+
+.contact-text-container a:hover {
+  color: var(--text-color);
+}
+
 
