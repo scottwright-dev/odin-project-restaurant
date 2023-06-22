@@ -3,9 +3,12 @@ import createTabs from './tabManager';
 export function createMenuPage(parentElement, switchTab) {
   createTabs(switchTab);
 
-  // menu content
   const menuContainer = document.createElement('div');
-  menuContainer.textContent = 'Menu items to be added here';
+
+  const bgImage = document.createElement('img');
+  bgImage.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
+  bgImage.classList.add('menupage-bg');
+  menuContainer.appendChild(bgImage);
 
   parentElement.appendChild(menuContainer);
 }

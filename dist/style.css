@@ -128,7 +128,7 @@ ul {
 /* NAV TABS STYLES */
 
 .nav-tabs-container {
-  animation: scrollIn ease-in 700ms;
+  /* animation: scrollIn ease-in 700ms; */
   display: flex;
   justify-content: center;
 }
@@ -157,9 +157,9 @@ ul {
   }
 }
 
-/* CONTACT PAGE STYLES */ 
+/* CONTACT & MENU PAGE BG IMG */ 
 
-.contactpage-bg {
+.contactpage-bg, .menupage-bg {
   filter: blur(10px);
   -webkit-filter: blur(10px);
   width: 60%;
@@ -168,6 +168,8 @@ ul {
   height: auto;
   object-fit: cover;
 }
+
+/* CONTACT PAGE STYLES */ 
 
 .map {
   position: absolute;
