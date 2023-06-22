@@ -68,11 +68,8 @@ a, p, h1 {
 
 .homepage-image {
   animation: fadeIn ease-in var(--animation-fade-duration);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60%;
-  max-width: 750px;
+  max-width: 850px;
   margin: 0 auto;
   height: auto;
   object-fit: cover;
