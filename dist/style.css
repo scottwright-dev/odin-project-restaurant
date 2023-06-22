@@ -57,7 +57,7 @@ body {
   background-color: var(--background-color);
 }
 
-a, p, h1 {
+a, p, h1, h2, li {
   color: var(--text-color);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -168,10 +168,9 @@ a, p, h1 {
 
 .map {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
   border: 6px solid var(--text-color);
   border-radius: 25px;
   animation: fadeInLeft 0.5s ease-in;
@@ -189,3 +188,18 @@ a, p, h1 {
         transform: translate(-50%, -50%); 
     } 
 }
+
+.contact-text-container {
+  text-align: center;
+}
+
+.contact-text-container h2 {
+  color: var(--text-highlight);
+  font-weight: bold;
+}
+
+.contact-text-container a {
+  color: var(--text-highlight);
+  font-weight: bold;
+}
+
