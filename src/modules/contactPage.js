@@ -29,7 +29,7 @@ export function createContactPage(parentElement, switchTab) {
   textContainer.appendChild(address);
 
   const openingTimes = document.createElement('h2');
-  openingTimes.textContent = 'Opening Times:';
+  openingTimes.textContent = 'Opening Times';
   textContainer.appendChild(openingTimes);
 
   const openingTimesList = document.createElement('ul');
