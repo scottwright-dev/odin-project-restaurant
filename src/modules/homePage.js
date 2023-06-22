@@ -7,7 +7,7 @@ export function createHomePage (switchTab) {
    
     // create elements
     const image = document.createElement('img');
-    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash.jpg';
+    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
     image.alt = 'Ichiraku Ramen Bar';
     image.classList.add('homepage-image');
     content.appendChild(image);
