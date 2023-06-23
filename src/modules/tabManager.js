@@ -9,13 +9,22 @@ function createTabs(switchTab) {
     return tab;
   }
 
-  const homeTab = createIndividualTab('Home', 'home');
-  const menuTab = createIndividualTab('Menu', 'menu');
-  const contactTab = createIndividualTab('Contact', 'contact');
+  const tabContainer = document.createElement('div');
+  tabContainer.classList.add('nav-tabs-container');
 
-  content.appendChild(homeTab);
-  content.appendChild(menuTab);
-  content.appendChild(contactTab);
+  const homeTab = createIndividualTab('Home', 'home');
+  homeTab.classList.add('nav-tabs');
+  tabContainer.appendChild(homeTab);
+
+  const menuTab = createIndividualTab('Menu', 'menu');
+  menuTab.classList.add('nav-tabs');
+  tabContainer.appendChild(menuTab);
+
+  const contactTab = createIndividualTab('Contact', 'contact');
+  contactTab.classList.add('nav-tabs');
+  tabContainer.appendChild(contactTab);
+
+  content.appendChild(tabContainer);
 }
 
 export default createTabs;

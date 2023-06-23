@@ -7,15 +7,27 @@ export function createHomePage (switchTab) {
    
     // create elements
     const image = document.createElement('img');
-    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash.jpg';
+    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
     image.alt = 'Ichiraku Ramen Bar';
+    image.classList.add('homepage-image');
     content.appendChild(image);
+
+    const textContainer = document.createElement('div');
+    textContainer.classList.add('text-container');
+    content.appendChild(textContainer);
 
     const title = document.createElement('h1');
     title.textContent = 'Ichiraku Ramen Bar';
-    content.appendChild(title);
+    title.classList.add('homepage-title');
+    textContainer.appendChild(title);
 
-    const copy = document.createElement('p');
-    copy.textContent = 'Step into Ichiraku Ramen Bar, where Japanese tradition intertwines with modernity to craft an extraordinary ramen experience in the heart of London.';
-    content.appendChild(copy);
+    const copyLine1 = document.createElement('p');
+    copyLine1.textContent = 'Japanese tradition intertwined with modernity.';
+    copyLine1.classList.add('homepage-copy');
+    textContainer.appendChild(copyLine1);
+
+    const copyLine2 = document.createElement('p');
+    copyLine2.textContent = 'Crafting an extraordinary ramen experience in the heart of London.';
+    copyLine2.classList.add('homepage-copy');
+    textContainer.appendChild(copyLine2);
 }
