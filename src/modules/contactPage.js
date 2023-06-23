@@ -4,6 +4,7 @@ export function createContactPage(parentElement, switchTab) {
   createTabs(switchTab);
 
   const contactContainer = document.createElement('div');
+  contactContainer.classList.add('contact-container');
 
   const bgImage = document.createElement('img');
   bgImage.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
