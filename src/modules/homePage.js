@@ -1,4 +1,5 @@
 import createTabs from './tabManager';
+import backgroundImage from '../img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
 
 export function createHomePage (switchTab) {
     const content = document.querySelector('#content');
@@ -7,7 +8,7 @@ export function createHomePage (switchTab) {
    
     // create elements
     const image = document.createElement('img');
-    image.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
+    image.src = backgroundImage;
     image.alt = 'Ichiraku Ramen Bar';
     image.classList.add('homepage-image');
     content.appendChild(image);

@@ -1,4 +1,6 @@
 import createTabs from './tabManager';
+import backgroundImage from '../img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
+import mapImage from '../img/ichiraku-map.png';
 
 export function createContactPage(parentElement, switchTab) {
   createTabs(switchTab);
@@ -7,12 +9,12 @@ export function createContactPage(parentElement, switchTab) {
   contactContainer.classList.add('contact-container');
 
   const bgImage = document.createElement('img');
-  bgImage.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
+  bgImage.src = backgroundImage;
   bgImage.classList.add('contactpage-bg');
   contactContainer.appendChild(bgImage);
 
   const map = document.createElement('img');
-  map.src = '../src/img/ichiraku-map.png';
+  map.src = mapImage;
   map.alt = 'location map of restaurant: 45 Frith Street, London W1'
   map.classList.add('map');
   contactContainer.appendChild(map);

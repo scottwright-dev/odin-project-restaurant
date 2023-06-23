@@ -1,4 +1,5 @@
 import createTabs from './tabManager';
+import backgroundImage from '../img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
 
 export function createMenuPage(parentElement, switchTab) {
   createTabs(switchTab);
@@ -8,7 +9,7 @@ export function createMenuPage(parentElement, switchTab) {
   parentElement.appendChild(menuContainer);
 
   const bgImage = document.createElement('img');
-  bgImage.src = '../src/img/leon-bublitz-fBeRt6DnhC8-unsplash-faded.png';
+  bgImage.src = backgroundImage;
   bgImage.classList.add('menupage-bg');
   menuContainer.appendChild(bgImage);
 
