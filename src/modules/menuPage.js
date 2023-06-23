@@ -18,29 +18,34 @@ export function createMenuPage(parentElement, switchTab) {
 
   const ramenHeader = document.createElement('h2');
   ramenHeader.textContent = 'Ramen';
+  ramenHeader.classList.add('food-drink-header');
   textContainer.appendChild(ramenHeader);
 
   const menuList = document.createElement('ul');
   menuList.classList.add('menu-list');
   textContainer.appendChild(menuList);
 
-  const createMenuItem = function(title, description, price) {
+  const createMenuItem = (title, description, price) => {
     const listItem = document.createElement('li');
+
+    const itemTitlePriceContainer = document.createElement('div');
+    itemTitlePriceContainer.classList.add('menu-item-title-price');
+    listItem.appendChild(itemTitlePriceContainer);
 
     const itemTitle = document.createElement('h3');
     itemTitle.textContent = title;
     itemTitle.classList.add('menu-item-title');
-    listItem.appendChild(itemTitle);
+    itemTitlePriceContainer.appendChild(itemTitle);
+
+    const itemPrice = document.createElement('span');
+    itemPrice.textContent = price;
+    itemPrice.classList.add('menu-item-price');
+    itemTitlePriceContainer.appendChild(itemPrice);
 
     const itemDescription = document.createElement('p');
     itemDescription.textContent = description;
     itemDescription.classList.add('menu-item-description');
     listItem.appendChild(itemDescription);
-
-    const itemPrice = document.createElement('p');
-    itemPrice.textContent = price;
-    itemPrice.classList.add('menu-item-price');
-    listItem.appendChild(itemPrice);
 
     return listItem;
   };
@@ -59,16 +64,17 @@ export function createMenuPage(parentElement, switchTab) {
 
   const drinksHeader = document.createElement('h2');
   drinksHeader.textContent = 'Drinks';
+  drinksHeader.classList.add('food-drink-header');
   textContainer.appendChild(drinksHeader);
 
   const drinksList = document.createElement('ul');
   drinksList.classList.add('menu-list');
   textContainer.appendChild(drinksList);
 
-  const beersItem = createMenuItem('Beers', 'Kirin, Asahi, Sapporo', '£6 each');
+  const beersItem = createMenuItem('Beers', 'Kirin, Asahi, Sapporo', '£6');
   drinksList.appendChild(beersItem);
 
-  const yuzuPunchItem = createMenuItem('Yuzu Punch', '', '£7');
+  const yuzuPunchItem = createMenuItem('Yuzu Punch', 'Yuzu, Hendricks Gin, Bitters, Soda', '£7');
   drinksList.appendChild(yuzuPunchItem);
 
   const mineralWaterItem = createMenuItem('Mineral Water', 'Still, sparkling', '£3');
@@ -76,5 +82,4 @@ export function createMenuPage(parentElement, switchTab) {
 
   const teaItem = createMenuItem('Teas', 'Green Tea, Jasmine Tea', '£2');
   drinksList.appendChild(teaItem);
-
 }
