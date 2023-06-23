@@ -21,9 +21,13 @@ export function createHomePage (switchTab) {
     title.classList.add('homepage-title');
     textContainer.appendChild(title);
 
-    const copy = document.createElement('p');
-    copy.textContent = 'Japanese tradition intertwined with modernity. Crafting an extraordinary ramen experience in the heart of London.';
-    copy.classList.add('homepage-copy');
-    textContainer.appendChild(copy);
+    const copyLine1 = document.createElement('p');
+    copyLine1.textContent = 'Japanese tradition intertwined with modernity.';
+    copyLine1.classList.add('homepage-copy');
+    textContainer.appendChild(copyLine1);
 
+    const copyLine2 = document.createElement('p');
+    copyLine2.textContent = 'Crafting an extraordinary ramen experience in the heart of London.';
+    copyLine2.classList.add('homepage-copy');
+    textContainer.appendChild(copyLine2);
 }
