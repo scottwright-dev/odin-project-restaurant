@@ -1,6 +1,7 @@
 import { createHomePage } from './modules/homePage';
 import { createMenuPage } from './modules/menuPage';
 import { createContactPage } from './modules/contactPage';
+import './style.css';
 
 // Tab switching
 function switchTab(tab) {
