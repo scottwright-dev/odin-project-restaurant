@@ -31,6 +31,7 @@ export function createContactPage(parentElement, switchTab) {
 
   const openingTimes = document.createElement('h2');
   openingTimes.textContent = 'Opening Times';
+  openingTimes.classList.add('opening-times-header');
   textContainer.appendChild(openingTimes);
 
   const openingTimesList = document.createElement('ul');
@@ -48,6 +49,11 @@ export function createContactPage(parentElement, switchTab) {
   openingTimesList.appendChild(listItem3);
 
   textContainer.appendChild(openingTimesList);
+
+  const bookingsHeader = document.createElement('h2');
+  bookingsHeader.textContent = 'Bookings';
+  bookingsHeader.classList.add('bookings-header');
+  textContainer.appendChild(bookingsHeader);
 
   const bookingsInfo = document.createElement('p');
   bookingsInfo.textContent = 'For bookings please email us at:';
