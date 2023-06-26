@@ -1,7 +1,4 @@
-# odin-project-restaurant
-A Restaurant website created in Javascript for The Odin Project
-
-# Restaurant #
+# Restaurant Page #
 
 <p align="center">
   <a href="https://scottwright-dev.github.io/odin-project-restaurant/">
